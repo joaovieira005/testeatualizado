@@ -1,0 +1,2 @@
+site-projeto/assets/video/*.mp4 filter=lfs diff=lfs merge=lfs -text
+site-projeto/assets/video/*.webm filter=lfs diff=lfs merge=lfs -text
