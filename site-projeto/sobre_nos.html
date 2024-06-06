@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>site(nome)</title>
+    <meta name="description" content="Menu">
+    <meta name="author" content="Agilie Team - Tatiana Kushnir">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/sobre nós/sobre_nos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-XXXXXX" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/sa.svg" alt="logo" style="width: 40%;">
+            </a>
+            <div class="nav-icones">
+                <div id="jogosFavoritosContainer" style="display: none;"></div>
+                <i class="borda"><i class="fa-solid fa-heart"></i></i>
+                <a href="jogos_plaplaystation.html"><i class="borda"><i class="fa-brands fa-playstation"></i></i></a>
+                <a href="jogos_xbox.html"><i class="borda"><i class="fa-brands fa-xbox"></i></i></a>
+                <span style="margin-right: -20px;"><a href="entrar.html"><i class="borda"><i
+                                class="fa-regular fa-user"></i></i></a></span>
+                <span style="margin-left: 5px;"><i class="borda fa-solid fa-search" id="searchIcon"></i></span>
+                <div class="menu-icones">
+                    <div class="linha1"></div>
+                    <div class="linha2"></div>
+                    <div class="linha3"></div>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="menu">
+                <img src="" alt="" />
+                <div class="navbar">
+                    <li><a href="index.html">Início</a></li>
+                    <li>
+                        <a href="jogos_mais_vendidos.html" id="secao-tendencia">Tendências</a>
+                    </li>
+                    <li>
+                        <a href="novidades_categorias.html" id="secao-ultimos">Últimos Lançamentos</a>
+                    </li>
+                    <li><a href="#">Categorias</a></li>
+                    <li>
+                        <a href="sobre_nos.html" id="secao-jogos-acao">Sobre-Nós</a>
+                    </li>
+                    <li><a href="#">Contate-nos</a></li>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <form id="formPesquisa" class="hidden">
+        <div class="campo-pesquisa-container">
+            <input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Pesquisar jogos... (3x)">
+            <span id="iconePesquisa" class="icone-pesquisa"></span>
+            <span id="limparCampo" class="limpar-campo">&times;</span>
+        </div>
+    </form>
+
+    <div id="contenedorResultados">
+        <div id="animacaoMario" class="mario-animation"></div>
+        <div id="resultadosPesquisa"></div>
+    </div>
+
+    <div class="secao-quem-somos">
+        <div class="logo-quem-somos">
+            <img src="assets/img/grupo-de-usuarios.png" alt="Logo principal" class="main-logo">
+            <div class="texto-quem-somos">
+                <h3>Quem Somos Nós</h3>
+                <p>Conheça um pouco mais sobre a história da <a href="index.html" class="cor-diferente">Moonstone</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="statistics">
+        <div class="stat">
+            <h3>Jogos Vendidos</h3>
+            <p class="count" data-target="60000">0</p>
+            <p class="label">Jogos Vendidos</p>
+        </div>
+        <div class="stat">
+            <h3>Clientes Atendidos</h3>
+            <p class="count" data-target="5000">0</p>
+            <p class="label">Clientes Atendidos</p>
+        </div>
+    </section>
+
+
+    </main>
+
+
+    <div class="orcamento-gratis-3">
+        <div class="img-e-texto-3">
+            <img src="assets/img/sa.svg">
+            <div class="separar-3">
+                <h2 class="orcamento-gratis-titulo-3"></h2>
+                <p>
+                    Somos especialistas em jogos de console, oferecendo uma ampla variedade de títulos para todos os
+                    gostos.
+                    Entendemos a paixão dos gamers e por isso garantimos um catálogo atualizado com os lançamentos mais
+                    recentes e os clássicos mais queridos.
+                    Compre seus jogos favoritos e aproveite uma experiência de compra rápida e segura. Nosso compromisso
+                    é proporcionar a você o melhor em entretenimento digital,
+                    mantendo você informado sobre as novidades e promoções exclusivas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="content-block">
+        <div class="text-block">
+            <h2>Nossa Missão</h2>
+            <p>Proporcionar a melhor experiência em jogos, oferecendo produtos de alta qualidade e um atendimento
+                excepcional.</p>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/missao.jpg" alt="Imagem de jogos">
+        </div>
+    </section>
+
+    <section class="content-block">
+        <div class="image-block">
+            <img src="assets/img/Valores.jfif" alt="Imagem de equipamentos de jogos">
+        </div>
+        <div class="text-block">
+            <h2>Valores</h2>
+            <p>Priorizamos a satisfação do cliente, buscando sempre superar expectativas e garantir a excelência em
+                nossos produtos e serviços.</p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <div class="text-block">
+            <h2>Qualidade</h2>
+            <p>Estamos comprometidos com a constante evolução e aprimoramento, buscando elevar ainda mais a qualidade em
+                todos os aspectos.</p>
+        </div>
+        <div class="image-block">
+            <img src="https://s.zst.com.br/cms-assets/2021/10/-fotofc6-jogos-4k-melhores-graficos-far-cry-6-1-.jpg"
+                alt="Imagem de um jogo em ação">
+        </div>
+    </section>
+
+    <section class="content-block">
+        <div class="image-block">
+            <img src="https://besthqwallpapers.com/Uploads/22-3-2018/45216/thumb2-business-concepts-4k-business-team-friendly-team-business-people.jpg"
+                alt="Imagem de uma equipe">
+        </div>
+        <div class="text-block">
+            <h2>Inovação</h2>
+            <p>Nosso foco é estar sempre na vanguarda, trazendo as últimas novidades e tendências do mundo dos games
+                para nossos clientes.</p>
+        </div>
+    </section>
+    </main>
+
+
+
+
+
+    <div class="jogos-container">
+    </div>
+
+    <div class="titulo-categoria-slide">Explora por categoria</div>
+    <div class="carousel-wrapper">
+        <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="categoria-card" data-hover="Aventura">
+                    <a href="aventura.html">
+                    <img src="assets/img/aventura.png" alt="Aventura">
+                    <span>AVENTURA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Ação">
+                    <a href="acao.html">
+                    <img src="assets/img/acao.png" style="height: 100%;" alt="Ação" >
+                    <span>AÇÃO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Casual">
+                    <img src="assets/img/casual.png" alt="Casual">
+                    <span>CASUAL</span>
+                </div>
+                <div class="categoria-card" data-hover="Corridas">
+                <a href="corridas.html">
+                    <img src="assets/img/corrida.png" alt="Corridas">
+                    <span>CORRIDAS</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Desporto">
+                <a href="desporto.html">
+                    <img src="assets/img/desporto.webp" alt="Desporto">
+                    <span>DESPORTO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Estratégia">
+                <a href="estrategia.html">
+                    <img src="assets/img/estra1.png" alt="Estratégia">
+                    <span>ESTRATÉGIA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="RPG">
+                <a href="RPG.html">
+                    <img src="assets/img/Designerrpg.jpeg" alt="RPG">
+                    <span>RPG</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="RPG de Ação">
+                <a href="rpg_de_acao.html">
+                    <img src="assets/img/Designerrpgacao.jpeg" alt="RPG de Ação">
+                    <span>RPG DE AÇÃO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Sobrevivência">
+                <a href="sobrevivencia.html">
+                    <img src="assets/img/sobrevivencia.png" alt="Sobrevivência">
+                    <span>SOBREVIVÊNCIA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Luta">
+                <a href="luta.html">
+                    <img src="assets/img/luta.png" alt="Luta">
+                    <span>LUTA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Terror">
+                <a href="terror.html">
+                    <img src="assets/img/terror.png" alt="Terror">
+                    <span>TERROR</span>
+                </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Jogos</h3>
+                <ul>
+                    <li><a href="aventura.html">Aventura</a></li>
+                    <li><a href="acao.html">Ação</a></li>
+                    <li><a href="corridas.html">Corridas</a></li>
+                    <li><a href="desporto.html">Desporto</a></li>
+                    <li><a href="estrategia.html">Estratégia</a></li>
+                    <li><a href="RPG.html">RPG</a></li>
+                    <li><a href="rpg_de_acao.html">RPG de Ação</a></li>
+                    <li><a href="sobrevivencia.html">Sobrevivência</a></li>
+                    <li><a href="luta.html">Luta</a></li>
+                    <li><a href="terror.html">Terror</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="jogos_mais_vendidos.html">Tendência</a></li>
+                    <li><a href="novidades_categorias.html">Últimos Lançamentos</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Política de Devolução</a></li>
+                    <li><a href="#">Pagamentos e Segurança</a></li>
+                    <li><a href="#">Frete e Prazo de Entrega</a></li>
+                    <li><a href="#">Devoluções e Reembolsos</a></li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/sa.svg" alt="Logo">
+                </a>
+                <div class="social-icons">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="jogos_plaplaystation.html"><i class="fab fa-playstation"></i></a>
+                    <a href="jogos_xbox.html"><i class="fab fa-xbox"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p style="text-align: center;">Todos os direitos reservados &copy; 2024 Monstone</p>
+        </div>
+    </footer>
+
+
+    <button id="backToTop" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/categorias_animadas.js"></script>
+    <script src="assets/js/script_slide.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script_menu.js"></script>
+    <script src="assets/js/script_adicionar_ao_favorito.js"></script>
+</body>
+
+
+
+</html>

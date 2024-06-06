@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/entrar_cadastrar/css/entrar.css" />
+  <title>site(nome)</title>
+  <style>
+    .fa-eye {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Entrar</h1>
+
+      <div id="msgError"></div>
+
+      <div class="label-float">
+        <input type="text" id="usuario" placeholder="" required />
+        <label id="userLabel" for="usuario">Nome</label>
+      </div>
+
+      <div class="label-float">
+        <input type="email" id="email" placeholder="" required />
+        <label id="emailLabel" for="email">E-mail</label>
+      </div>
+
+      <div class="label-float">
+        <input type="password" id="senha" placeholder="" required />
+        <label id="senhaLabel" for="senha">Senha</label>
+        <i class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility('senha')"></i>
+      </div>
+
+      <div class="label-float">
+        <input type="password" id="confirmarSenha" placeholder="" required />
+        <label id="confirmarSenhaLabel" for="confirmarSenha">Confirmar Senha</label>
+        <i class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility('confirmarSenha')"></i>
+      </div>
+
+      <div class="justify-center">
+        <button onclick="entrar()">Entrar</button>
+      </div>
+
+      <div class="justify-center">
+        <hr />
+      </div>
+
+      <p>
+        Não tem uma conta?
+        <a href="cadastrar.html">
+          Cadastre-se
+        </a>
+      </p>
+      <br>
+      <p>
+        Continuar Anonimo?
+        <a href="index.html">
+          Volte Para o Site
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script src="../js/signin.js"></script>
+  <script>
+    function togglePasswordVisibility(inputId) {
+      const input = document.getElementById(inputId);
+      const icon = input.nextElementSibling;
+      if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+    }
+  </script>
+</body>
+
+</html>

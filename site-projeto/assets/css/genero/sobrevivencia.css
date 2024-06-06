@@ -1,0 +1,1638 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Poppins:wght@200&family=Roboto:ital,wght@0,100;1,300&family=Source+Sans+Pro:wght@200&family=Ubuntu&display=swap');
+@import url('http://fonts.cdnfonts.com/css/games?styles=17672');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rem;
+  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* variáveis globais */
+
+:root {
+  --main-color: #fa5353;
+  --second-color: #5f3dad;
+  --dark-color: #181b2b;
+  --light-color: #322f40;
+  --text-color: hsl(0, 0%, 91%);
+}
+
+img {
+  width: 100%;
+}
+
+
+body {
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  overflow-x: hidden;
+}
+
+::selection {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark-color);
+  z-index: 100;
+  user-select: none;
+  margin-top: 10px;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 auto 0 0;
+  font-style: smooth;
+  font-kerning: 1rem;
+  font-stretch: ultra-expanded;
+  text-transform: uppercase;
+  font-family: 'Games', sans-serif;
+}
+
+
+.logo span {
+  color: var(--main-color);
+  font-family: 'Games', sans-serif;
+}
+
+.nav-icones {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.nav-icones .borda {
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.menu-icones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.3s;
+}
+
+.menu-icones div {
+  display: block;
+  background-color: var(--text-color);
+  height: 2px;
+  width: 25px;
+  transition: 0.3s;
+}
+
+
+.move .linha1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .linha2 {
+  opacity: 0;
+}
+
+.move .linha3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 14, 0.9);
+  z-index: 106;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  clip-path: circle(0% at 100% 0%);
+}
+
+.menu.active {
+  clip-path: circle(144% at 100% 0%);
+}
+
+.menu img {
+  width: 800px;
+}
+
+.navbar {
+  display: grid;
+  row-gap: 1rem;
+  text-align: right;
+  padding: 2rem;
+}
+
+.navbar a {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  border-bottom: 4px solid var(--main-color);
+  font-size: 1.8rem;
+}
+
+/* cor azul para o ícone da Playstation */
+.fa-brands.fa-playstation {
+  transition: color 0.7s ease;
+}
+
+.fa-brands.fa-playstation:hover {
+  color: blue;
+
+}
+
+
+/* cor verde para o ícone do xbox */
+.fa-brands.fa-xbox {
+  transition: color 0.7s ease;
+}
+
+.fa-brands.fa-xbox:hover {
+  color: rgb(0, 171, 82);
+
+}
+
+
+/*cor cinza escuro para o ícone do notebook */
+.fa-solid.fa-desktop {
+  transition: color 0.7s ease;
+}
+
+.fa-solid.fa-desktop:hover {
+  color: rgb(192, 192, 192);
+
+}
+
+
+/* azul mais claro para o ícone do usuário */
+.fa-regular.fa-user {
+  transition: color 0.7s ease;
+}
+
+.fa-regular.fa-user:hover {
+  color: rgba(0, 255, 238, 0.878);
+
+}
+
+/* cor vermelha para o ícone do coração */
+
+.fa-solid.fa-heart {
+  transition: color 0.7s ease;
+}
+
+.fa-solid.fa-heart:hover {
+  color: rgb(231, 76, 60);
+}
+
+
+/* categorias /*******************************************/
+
+:root {
+  --font-family: 'Arial', sans-serif;
+  --font-size: 14px;
+  --color-white: #ffffff;
+  --color-hover: #fa5353;
+  --margin-small: 10px;
+  --gap-large: 20px;
+  --transition-duration: 0.3s;
+}
+
+.titulo-jogos {
+  color: var(--color-white);
+  margin: var(--margin-small);
+}
+
+.categorias-h5 {
+  margin-bottom: var(--margin-small);
+  margin-left: var(--margin-small);
+  color: var(--color-white);
+  font-size: 18px;
+}
+
+.ver-por-genero {
+  margin-top: var(--margin-small);
+}
+
+.categorias li a i {
+  margin-right: 10px;
+  
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+}
+
+.categorias {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categorias li {
+  margin-left: var(--margin-small);
+  font-size: var(--font-size);
+  margin-top: 1px;
+}
+
+.categorias a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: 400;
+  transition: color var(--transition-duration);
+  font-style: italic;
+  position: relative;
+}
+
+.categorias a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-hover);
+  visibility: hidden;
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.categorias a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.categorias a:hover {
+  color: var(--color-hover);
+}
+
+.categorias a:active {
+  transform: scale(0.98);
+  color: #ff4040;
+}
+
+
+/* ///////////////////////////// SISTEMA DE PESQUISA */
+
+/* menu pesquisa */
+
+
+:root {
+  --main-color: #fa5353;
+  --second-color: #5f3dad;
+  --dark-color: #181b2b;
+  --light-color: #322f40;
+  --text-color: hsl(0, 0%, 91%);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  overflow-x: hidden;
+}
+
+::selection {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+
+/* Estilo do formulário de pesquisa */
+#formPesquisa {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin-top: 9.3%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+#formPesquisa.show {
+  opacity: 1;
+  max-height: 200px; /* Altura suficiente para o conteúdo */
+}
+
+.campo-pesquisa-container {
+  position: relative;
+  width: 100%;
+}
+
+#campoPesquisa.remove-text {
+  transition: width 1.5s ease-in-out;
+  width: calc(100% - 50px);
+}
+
+/* Estilo do campo de pesquisa */
+#campoPesquisa {
+  width: 100%;
+  padding: 15px 20px 15px 40px;
+  font-size: 18px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2866/2866321.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px;
+  border: 2px solid var(--light-color);
+  border-radius: 0;
+  outline: none;
+  background-color: var(--dark-color);
+  color: var(--text-color);
+  transition: border-color 0.3s, background-color 0.3s;
+  position: relative;
+}
+
+#campoPesquisa:focus {
+  border-color: var(--main-color);
+  background-color: var(--light-color);
+}
+
+.icone-pesquisa {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.limpar-campo {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+  color: var(--text-color);
+}
+
+#campoPesquisa:not(:placeholder-shown)~.limpar-campo {
+  display: inline;
+}
+
+.char-warning {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  color: var(--main-color);
+  margin-top: 5px;
+}
+
+#contenedorResultados {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+#resultadosPesquisa {
+  background-color: var(--dark-color);
+  border: 2px solid var(--light-color);
+  border-top: none;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#resultadosPesquisa.show-results {
+  opacity: 1;
+}
+
+.mario-animation {
+  width: 100%;
+  height: 50px;
+  background-image: url('https://media.tenor.com/UkvleU1dQK4AAAAj/2d-mario-running.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  animation: marioRun 1s linear forwards;
+  display: none;
+}
+
+@keyframes marioRun {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.jogo-item-resul {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-color);
+  padding: 10px;
+  background-color: var(--dark-color);
+  transition: background-color 0.3s;
+}
+
+.jogo-item-resul:hover {
+  background-color: var(--light-color);
+}
+
+.jogo-item-resul img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+}
+
+.jogo-info-resul {
+  flex: 1;
+  padding: 0 10px;
+  color: var(--text-color);
+}
+
+.jogo-info-resul p {
+  margin: 5px 0;
+}
+
+.link-jogo {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link-jogo:hover {
+  color: var(--second-color);
+}
+
+.botao-compra {
+  color: var(--text-color);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0;
+}
+
+.white-icon {
+  color: var(--text-color);
+}
+
+.pagina-especifica-link {
+  cursor: pointer;
+}
+
+#resultadosPesquisa.has-results {
+  display: block;
+}
+
+/* Estilos para a lupa e transições */
+.borda {
+  cursor: pointer;
+}
+
+#searchIcon {
+  margin-left: 10px;
+}
+
+/* Estilo da animação do Mario */
+.mario-animation {
+  width: 100%;
+  height: 50px;
+  background-image: url('https://media.tenor.com/UkvleU1dQK4AAAAj/2d-mario-running.gif');
+  /* Imagem de Mario correndo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  animation: marioRun 1s linear forwards;
+  /* Durar apenas 1 segundo */
+  display: none;
+  /* Esconde a animação inicialmente */
+}
+
+@keyframes marioRun {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+
+/* Estilo dos itens de resultados */
+.jogo-item-resul {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-color);
+  padding: 10px;
+  background-color: var(--dark-color);
+  transition: background-color 0.3s;
+}
+
+.jogo-item-resul:hover {
+  background-color: var(--light-color);
+}
+
+.jogo-item-resul img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  /* Removido as bordas arredondadas */
+}
+
+.jogo-info-resul {
+  flex: 1;
+  padding: 0 10px;
+  color: var(--text-color);
+}
+
+.jogo-info-resul p {
+  margin: 5px 0;
+}
+
+.link-jogo {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link-jogo:hover {
+  color: var(--second-color);
+}
+
+.botao-compra {
+  color: var(--text-color);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0;
+}
+
+/* Ajuste de cores e margens */
+.white-icon {
+  color: var(--text-color);
+}
+
+.pagina-especifica-link {
+  cursor: pointer;
+}
+
+/* Mostrar o contêiner de resultados apenas quando houver resultados */
+#resultadosPesquisa.has-results {
+  display: block;
+}
+
+
+/* jogos playstation */
+.jogos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 220px;
+  margin-top: -570px;
+  overflow-x: auto;
+}
+
+.jogo-item {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  background-color: #1e1e1e;
+  /* Fundo escuro para contraste */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.6s ease, box-shadow 0.6s ease, border 0.6s ease;
+}
+
+.jogo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.jogo-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 15px 2px #5f3dad;
+  border: 2px solid #5f3dad;
+}
+
+.jogo-item:hover img {
+  transform: scale(1.1);
+}
+
+.jogo-info {
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.7s ease, background-color 0.3s ease;
+  backdrop-filter: blur(5px);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.jogo-info p {
+  margin-bottom: 8px;
+}
+
+.jogo-item:hover .jogo-info {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 10px 2px #5f3dad;
+}
+
+.jogo-avaliacao {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.jogo-avaliacao i {
+  margin-right: 5px;
+}
+
+.jogo-item:hover .jogo-avaliacao i,
+.jogo-item:hover .jogo-avaliacao p {
+  color: yellow;
+}
+
+.titulo-jogos {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-family: 'Games', sans-serif;
+  margin-top: 90px;
+  margin-left: 14%;
+}
+
+/* Estilo padrão do ícone do coração */
+.jogo-item .fa-heart {
+  position: absolute;
+  font-size: 34px;
+  top: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.818);
+  cursor: pointer;
+  transition: color 0.6s ease, transform 0.6s ease;
+  /* Alteração para 0.6 segundos */
+  z-index: 1;
+  /* Garante que o ícone do coração esteja acima da imagem do jogo */
+}
+
+/* Efeito de mudança de cor ao passar o mouse */
+.jogo-item .fa-heart:hover {
+  color: #ff0000;
+  /* Nova cor quando o mouse está sobre o ícone */
+  animation: heartbeat 1s infinite;
+  /* Adiciona animação de batimento cardíaco */
+}
+
+/* Animação de batimento cardíaco */
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Efeito de brilho ao passar o mouse */
+.jogo-item:hover {
+  box-shadow: 0 0 10px 2px#5f3dad;
+  transition: box-shadow 0.6s ease;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #5f3dad, 0 0 10px #5f3dad, 0 0 20px #5f3dad, 0 0 40px #5f3dad;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #5f3dad, 0 0 20px #5f3dad, 0 0 30px #5f3dad, 0 0 40px #5f3dad;
+  }
+}
+
+.desconto-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 255, 0, 0.91);
+  /* Verde com 70% de opacidade */
+  color: white;
+  padding: 5px 10px;
+  border-top-right-radius: 8px;
+  font-size: 23px;
+}
+
+/* jogo mais vendido da historia */
+.mais-vendido {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  position: absolute;
+  bottom: 1px;
+  right: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 1px solid #8BC34A;
+  box-shadow: 0 0 10px #8BC34A, 0 0 5px #8BC34A, 0 0 10px #8BC34A;
+}
+
+.mais-vendido i {
+  margin-right: 5px;
+  font-size: 14px;
+  color: gold;
+}
+
+.mais-vendido p {
+  margin: 0;
+}
+
+/* Categoria */
+.genre {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.441);
+  /* ou qualquer cor que você queira para os links */
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 2px 15px;
+  margin-left: -15px;
+  font-size: 20px;
+}
+
+#genre {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.441);
+  /* ou qualquer cor que você queira para os links */
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 2px 15px;
+  margin-left: -15px;
+  font-size: 20px;
+}
+
+
+
+
+
+.alerta.mostrar {
+  display: block;
+  /* Mostra o alerta quando a classe 'mostrar' é adicionada */
+}
+
+/*******************************************************************************/
+#jogosFavoritos {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  /* Inicialmente, a seção estará oculta */
+  color: white;
+  /* Cor do texto */
+}
+
+
+#mensagemFavorito {
+  position: fixed;
+  top: 42px;
+  /* Posicionamento no canto superior */
+  margin-left: 32%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: none;
+  z-index: 9999;
+  /* Ajuste o valor do z-index conforme necessário */
+  pointer-events: none;
+  /* Impede a interação do usuário com a mensagem */
+}
+
+#mensagemFavorito.mostrar {
+  display: block;
+  pointer-events: auto;
+  /* Permite a interação do usuário com a mensagem quando visível */
+}
+
+
+/* Estilo para a lista de jogos favoritos */
+#jogosFavoritosContainer {
+  position: absolute;
+  top: calc(100% + 5px);
+  /* Posição abaixo do coração */
+  left: 75%;
+  /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  /* Cor do texto */
+  display: none;
+  /* Inicialmente, a lista estará oculta */
+  max-height: 200px;
+  /* Altura máxima da lista, com barra de rolagem se necessário */
+  overflow-y: auto;
+  /* Adiciona barra de rolagem vertical quando necessário */
+  z-index: 999;
+  /* Garante que a lista esteja acima de outros elementos */
+  width: 30%;
+}
+
+/* Estilo para cada jogo favorito na lista */
+.jogo-favorito {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.jogo-favorito:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Cor de fundo ao passar o mouse */
+}
+
+.jogo-favorito {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+/****************************************  OFERTAS ESPECIAIS *******************************************************************/
+
+
+.titulo-jogos-OFERTAS-ESPECIAIS {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-family: 'Games', sans-serif;
+  margin-top: -190px;
+  /* Ajusta o espaçamento superior */
+  margin-left: 14%;
+  /* Ajusta a margem esquerda */
+}
+
+.jogos-container-OFERTAS-ESPECIAIS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 220px;
+  margin-top: -220px;
+  overflow-x: auto;
+  /* Adiciona rolagem horizontal quando necessário */
+}
+
+.jogo-item-OFERTAS-ESPECIAIS {
+  width: calc(25% - 20px);
+  /* Para 4 jogos por linha */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.desconto-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 255, 0, 0.91);
+  /* Verde com 70% de opacidade */
+  color: white;
+  padding: 5px 10px;
+  border-top-right-radius: 8px;
+  font-size: 23px;
+}
+
+/* CSS DO R$ */
+
+.preco-antigo {
+  color: red;
+  font-size: 16px;
+  text-decoration: line-through;
+  /* Adiciona uma linha sobre o texto */
+}
+
+.preco-novo {
+  margin-top: 5px;
+  /* Ajusta o espaçamento vertical */
+}
+
+/* CSS DO R$ */
+
+/* MENSAGEM DE JOGO DO ANO */
+.mensagem-jogo-ano {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 11px;
+}
+
+/* MENSAGEM DE JOGO DO ANO */
+
+.mostrar-mais-btn {
+  margin-top: 20px;
+  /* Adiciona espaço entre os jogos e o botão */
+}
+
+/* Classe para adicionar espaçamento entre os jogos */
+#jogosExtras {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Adiciona margem entre os jogos dentro da div jogosExtras */
+#jogosExtras .jogo-item {
+  margin-right: 26px;
+  /* Adiciona margem à direita de cada jogo */
+  margin-bottom: 20px;
+  /* Adiciona margem na parte inferior de cada jogo */
+}
+
+/* Remove a margem direita do último jogo para evitar que ele seja empurrado para baixo */
+#jogosExtras .jogo-item:last-child {
+  margin-right: 0;
+  /* Remove a margem à direita do último jogo */
+}
+
+/* Estilo para o botão "Mostrar Mais" */
+#mostrarMaisBtn {
+  width: 100%;
+  background-color:  #fa5353;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.titulo-jogos-OFERTAS-ESPECIAIS-BOTÃO {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Games', sans-serif;
+}
+
+.titulo-jogos-OFERTAS-ESPECIAIS-BOTÃO:hover {
+  filter: brightness(75%); /* Reduz o brilho do botão quando o mouse passa*/
+}
+
+
+/* css dos quadrados */
+/* CSS dos quadrados */
+.container-3-quadrados {
+  display: flex;
+  justify-content: center;
+  margin-top: -170px;
+}
+
+.box {
+  width: 560px;
+  height: 400px;
+  margin: 0 10px;
+  border: 1px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.box .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.ps4 {
+  background: linear-gradient(135deg, #003087, #01446b);
+}
+
+.xbox {
+  background: linear-gradient(135deg, #107c10, #0c5e0c);
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.box:hover .content {
+  opacity: 1;
+}
+
+.box i {
+  font-size: 76px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: inherit;
+}
+
+.box .content {
+  text-align: center;
+}
+
+.box .icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+.box h2 {
+  font-size: 24px;
+}
+
+
+/* perguntas é respostas */
+
+
+.perguntas-fre {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  margin-left: 12%;
+  margin-right: auto;
+  max-width: 800px;
+  margin-top: -60px; 
+}
+
+details {
+  font-family: 'Montserrat', sans-serif;
+  width: 75.5%;
+  margin: 10px 10% 10px 12%;
+  background-color: rgb(38, 38, 38);
+  color: #fff;
+  padding: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 0px;
+  font-weight: 90;
+  transition: background-color 0.9s ease;
+
+  /* transição  para a mudança de cor de fundo */
+}
+
+details[open] {
+  background-color: #fa5353;
+  color: rgb(0, 0, 0);
+}
+
+details summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição para a rotação do símbolo */
+}
+
+details summary::after {
+  content: "+";
+  font-size: 30px;
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição para a rotação do símbolo */
+}
+
+details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.fa-brands.fa-cc-visa,
+.fa-brands.fa-cc-mastercard {
+  color: #ffffff;
+}
+
+.fa-brands.fa-cc-visa:hover {
+  color: blue; 
+}
+
+.fa-brands.fa-cc-mastercard:hover {
+  color: red; 
+}
+
+/* Alinha os ícones e a imagem horizontalmente */
+
+
+#elo_id {
+  width: 6%;
+  margin-left: 6px;
+  margin-top: 10px;
+}
+
+#american_id {
+  width: 4%;
+  margin-left: 6px;
+}
+
+/* categorias animada */
+
+.carousel-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -80px;
+  }
+  
+  .carousel-container {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .categoria-card {
+    min-width: calc(25% - 20px); /* Ajuste para garantir que 4 cartões se encaixem corretamente */
+    height: 220px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  }
+  
+  .categoria-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(95, 61, 173, 0.5); /* Efeito de brilho na cor #5f3dad */
+    border: 2px solid #5f3dad;
+  }
+  
+  .categoria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garantir que as imagens se encaixem corretamente */
+    transition: transform 0.3s;
+  }
+  
+  .categoria-card:hover img {
+    transform: scale(1.03);
+  }
+  
+  .categoria-card span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 20px;
+    z-index: 1;
+    border-radius: 50%;
+    transition: background 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .carousel-control.prev {
+    left: -70px;
+  }
+  
+  .carousel-control.next {
+    right: -70px;
+  }
+  
+  /* Animação para aparecer e desaparecer suavemente */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  /* Estilos Adicionais para um Visual Gamer */
+  #backToTop {
+    font-family: 'Press Start 2P', cursive;
+    /* Fonte estilo gamer */
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  /* Estilo especial quando próximo do footer */
+  #backToTop.near-footer {
+    background-color: #ff7575;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.7);
+  }
+  
+  .titulo-categoria-slide {
+    text-align: left;
+    margin-left: 12%;
+    font-size: 1.0em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+
+@media (max-width: 768px) {
+  .menu {
+    left: 0;
+    /* Alterando a posição para 0 em dispositivos móveis para garantir que o menu seja sempre visível */
+  }
+}
+
+/* Animação "bounce" */
+@keyframes bounce {
+  0% {
+    transform: rotate(0);
+  }
+
+  45% {
+    transform: rotate(15deg);
+  }
+
+  90% {
+    transform: rotate(-7deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* botão de volta para o topo */
+
+#backToTop {
+    display: none;
+    /* Inicialmente escondido */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 24px;
+    background-color: #fa5353;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    /* Torna o botão perfeitamente circular */
+    width: 60px;
+    /* Largura igual à altura para garantir forma circular */
+    height: 60px;
+    /* Altura igual à largura para garantir forma circular */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    /* Centraliza o ícone dentro do botão */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+  }
+  
+  #backToTop i {
+    transition: transform 0.3s ease;
+  }
+  
+  #backToTop:hover i {
+    transform: translateY(-5px);
+  }
+  
+  #backToTop:hover {
+    background-color: #e14b4b;
+    transform: scale(1.1);
+  }
+  
+  /* Animação para aparecer e desaparecer suavemente */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  /* Estilos Adicionais para um Visual Gamer */
+  #backToTop {
+    font-family: 'Press Start 2P', cursive;
+    /* Fonte estilo gamer */
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  
+  #backToTop i {
+    transition: transform 0.3s ease;
+  }
+  
+  #backToTop:hover i {
+    transform: translateY(-5px);
+  }
+  
+  #backToTop:hover {
+    background-color: #e14b4b;
+    transform: scale(1.1);
+  }
+  
+
+/* footer */
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #222);
+    padding: 60px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #333;
+    margin-top: 200px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+  }
+  
+  .footer-column h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #e2e2e2;
+    text-transform: uppercase;
+    border-bottom: 3px solid #e2e2e2;
+    padding-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: -40px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 0, 200, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-icons a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-icons a.facebook:hover {
+    background-color: #3b5998;
+  }
+  
+  .social-icons a.twitter:hover {
+    background-color: #1da1f2;
+  }
+  
+  .social-icons a.instagram:hover {
+    background-color: #e1306c;
+  }
+  
+  .social-icons a.youtube:hover {
+    background-color: #ff0000;
+  }
+  
+  .social-icons a.fa-playstation:hover {
+    background-color: #003087;
+  }
+  
+  .social-icons a.fa-xbox:hover {
+    background-color: #107c10;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column,
+    .footer-logo {
+      flex: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      margin-top: 20px;
+    }
+  }

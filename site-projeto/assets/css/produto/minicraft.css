@@ -1,0 +1,1277 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Poppins:wght@200&family=Roboto:ital,wght@0,100;1,300&family=Source+Sans+Pro:wght@200&family=Ubuntu&display=swap');
+@import url('http://fonts.cdnfonts.com/css/games?styles=17672');
+
+
+/* head */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    font-family:'Arial', sans-serif
+
+}
+
+/* variáveis globais */
+
+:root {
+    --main-color: #fa5353;
+    --second-color: #5f3dad;
+    --dark-color: #181b2b;
+    --light-color: #322f40;
+    --text-color: hsl(0, 0%, 91%);
+}
+
+img {
+    width: 100%;
+}
+
+
+body {
+    
+    color: var(--text-color);
+    background-color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+::selection {
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    z-index: 100;
+    user-select: none;
+    margin-top: 10px;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 auto 0 0;
+    font-style: smooth;
+    font-kerning: 1rem;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    font-family: 'Games', sans-serif;
+}
+
+
+
+
+.logo span {
+    color: var(--main-color);
+    font-family: 'Games', sans-serif;
+}
+
+.nav-icones {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.nav-icones .borda {
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.menu-icones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.menu-icones div {
+    display: block;
+    background-color: var(--text-color);
+    height: 2px;
+    width: 25px;
+    transition: 0.3s;
+}
+
+
+.move .linha1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .linha2 {
+    opacity: 0;
+}
+
+.move .linha3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 14, 0.9);
+    z-index: 106;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    clip-path: circle(0% at 100% 0%);
+}
+
+.menu.active {
+    clip-path: circle(144% at 100% 0%);
+}
+
+.menu img {
+    width: 800px;
+}
+
+.navbar {
+    display: grid;
+    row-gap: 1rem;
+    text-align: right;
+    padding: 2rem;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    border-bottom: 4px solid var(--main-color);
+    font-size: 1.8rem;
+}
+
+.fa-brands.fa-playstation {
+    transition: color 0.7s ease;
+}
+
+.fa-brands.fa-playstation:hover {
+    color: blue;
+
+}
+
+/* cor verde para o ícone do xbox */
+.fa-brands.fa-xbox {
+    transition: color 1.0s ease;
+}
+
+.fa-brands.fa-xbox:hover {
+    color: rgb(0, 171, 82);
+
+}
+
+
+/*cor cinza escuro para o ícone do notebook */
+.fa-solid.fa-desktop {
+    transition: color 0.7s ease;
+}
+
+.fa-solid.fa-desktop:hover {
+    color: rgb(192, 192, 192);
+
+}
+
+
+/* azul mais claro para o ícone do usuário */
+.fa-regular.fa-user {
+    transition: color 0.7s ease;
+}
+
+.fa-regular.fa-user:hover {
+    color: rgba(0, 255, 238, 0.878);
+
+}
+
+/* cor vermelha para o ícone do coração */
+
+.fa-solid.fa-heart {
+    transition: color 0.7s ease;
+}
+
+.fa-solid.fa-heart:hover {
+    color: rgb(231, 76, 60);
+}
+
+/* Pagamentos e Segurança */
+.fa-lock {
+    transition: color 0.7s;
+}
+
+.fa-lock:hover {
+    color: blue;
+}
+
+
+/*Política de devolução*/
+.fa-undo {
+    transition: color 0.4s;
+}
+
+.fa-undo:hover {
+    color: rgb(145, 255, 0);
+}
+
+
+#formPesquisa {
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin-top: 7%;
+  }
+  
+  .campo-pesquisa-container {
+    position: relative;
+    width: 120%;
+  }
+  
+  #campoPesquisa {
+    width: calc(100% - 40px);
+    padding: 8px 40px 8px 40px;
+    font-size: 16px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2866/2866321.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 24px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    outline: none;
+    background-color:  #ffffff00;
+    color: #fff;
+  }
+  
+  #campoPesquisa:focus {
+    border-color: #007bff;
+  }
+  
+  .icone-pesquisa {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* Estilizando o botão de limpar */
+  .limpar-campo {
+    position: absolute;
+    top: 15%;
+    right: 60px;
+    cursor: pointer;
+  }
+  .limpar-campo {
+    display: none;
+  }
+  /* CSS DO RESULTADO DA PESQUISA */
+  #contenedorResultados {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 20px; /* Adicionando padding para espaçamento interno */
+  }
+  .white-icon {
+    color: white; /* Define a cor branca para o ícone */
+  }
+  
+  .pagina-especifica-link {
+    cursor: pointer; 
+  }
+  
+  .jogo-item-resul {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Mudando a cor da borda para um cinza mais suave */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra sutil */
+  }
+  
+  .jogo-item-resul img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px; /* Removendo a repetição do border-radius */
+  }
+  
+  .jogo-info-resul {
+    flex: 1;
+    padding: 20px;
+    color: #333; /* Mudando a cor do texto para um cinza mais escuro */
+  }
+  
+  .jogo-info-resul p {
+    margin: 5px 0;
+    color: #fff;
+  }
+  
+  .link-jogo {
+    text-decoration: none;
+    color: #007bff; /* Mudando a cor do link para azul */
+    font-weight: bold; /* Adicionando negrito ao link */
+  }
+  
+  .botao-compra {
+    color: #ffffff00; /* Cor do texto branca */
+    border: none; /* Remove a borda */
+    padding: 0px 0px;
+    cursor: pointer; 
+    margin-right: 400px;
+    text-align: center;
+    font-size: 0px;
+  }
+
+/* //////////////////// JOGO  ///// */
+
+.classificação-livre {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.classificação-livre img {
+    margin-top: 7px;
+    width: 5%;
+    cursor: pointer;
+}
+
+.classificação-livre .classificação-livre-texto {
+    visibility: hidden;
+    width: 130px;
+    background-color: #fa5353;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Adjusted to position above the icon */
+    left: 3%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.classificação-livre .classificação-livre-texto::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fa5353 transparent transparent transparent;
+}
+
+.classificação-livre img:hover + .classificação-livre-texto {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.tudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.produto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.imagem-produto {
+    margin-top: 70px;
+    width: 45%;
+}
+
+.imagem-grande img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    /* Alinha as miniaturas à esquerda */
+    margin-top: 10px;
+    overflow-x: auto;
+    /* Adiciona uma barra de rolagem horizontal se necessário */
+}
+
+.thumbnail {
+    width: 150px;
+    height: 10%;
+    cursor: pointer;
+    border: 4px solid transparent;
+    /* Adiciona uma borda transparente */
+}
+
+.thumbnail:hover {
+    border-color: #fa5353;
+}
+
+/* Estilizando a barra de rolagem */
+.thumbnails::-webkit-scrollbar {
+    height: 8px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+    background: #fa5353;
+    border-radius: 10px;
+}
+
+.thumbnails::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb:hover {
+    background: #c43d3d;
+}
+
+.detalhes-produto {
+    margin-top: 90px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.valor-produto {
+    margin-top: 10px; 
+}
+
+/* Estilo para o valor do produto */
+.valor {
+    font-size: 24px; 
+    font-weight: bold; /* Negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.estoque {
+    margin-left: 10px;
+    font-size: 23px;
+    color: rgb(0, 118, 0) 
+}
+
+.detalhes-produto h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.descricao {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.botao-adicionar {
+    width: 100%;
+    background-color: #8a44ff;
+    color: #fff;
+}
+
+.avaliacao-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avaliacao i {
+    color: #FFD700;
+}
+
+.avaliacao-nota {
+    font-size: 18px;
+    color: #ffffff; 
+}
+
+.fa-star {
+    font-size: 14px;
+    color: #FFD700;
+}
+
+.info-adicional-bloco {
+    background-color: rgba(2, 2, 2, 0.763);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    /* Espaço entre os blocos */
+}
+
+.info-adicional-bloco h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.info-adicional-bloco ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-adicional-bloco ul li:before {
+    content: "\2022";
+    /* • */
+    color: white;
+    display: inline-block;
+    width: 1em;
+    /* Espaço entre o ponto e o texto */
+    margin-left: 1px;
+}
+
+.info-adicional-bloco button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.jogo-avaliacao {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .jogo-avaliacao i {
+    margin-right: 5px;
+  }
+  
+  .jogo-item:hover .jogo-avaliacao i,
+  .jogo-item:hover .jogo-avaliacao p {
+    color: yellow;
+  }
+  
+  .jogo-item:hover .jogo-info {
+    opacity: 1;
+    /* Mostra as informações ao passar o mouse */
+  }
+
+.botao-comprar {
+    font-weight: 500;
+    margin-top: 17px;
+    background-color: #1a1a1a;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botao-adicionar {
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+Pagamentos e Segurança
+Política de devolução  */
+
+.pagamentos-seguranca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.legenda-seguranca {
+    margin-left: 5px;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.Política-de-segurança {
+    cursor: pointer;
+    margin-left: 5px;
+    font-style: italic;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.Política-de-segurança:hover {
+    color: rgb(123, 255, 0);
+}
+
+
+.info-adicional-bloco button:hover {
+    transform: translateY(-2px);
+}
+
+.comentarios {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.comentarios h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.comentario {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 15px;
+}
+
+.comentario h3 {
+    color: #aaa;
+}
+
+.comentario p {
+    color: #c7c5c5;
+}
+
+.imagem-grande img {
+    width: 40rem;
+    height: 36rem;
+    object-fit: contain;
+}
+
+.botao-comprar:hover,
+.botao-adicionar:hover {
+    background-color: #ff0000;
+}
+
+.produto {
+    margin-top: 20px;
+}
+
+.produto .box {
+    border-radius: 30px;
+    width: 50%;
+    height: 50px;
+    background-color: #000000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box; 
+    padding: 10px; 
+    margin: 0;
+    border: 3px solid transparent; 
+}
+
+.produto .box.ps4 {
+    margin-right: 10px; 
+    border-color:blue; 
+}
+
+.produto .box.xbox {
+    margin-left: 10px; 
+}
+
+.produto .box h2 {
+    margin: 0;
+}
+
+.produto .box i {
+    margin-right: 5px;
+}
+
+.produto .box.xbox {
+    margin-left: 10px; 
+    border-color: transparent;
+}
+
+.produto .box.xbox:hover {
+    border-color: rgb(0, 171, 82); 
+}
+
+.produto .box.xbox:not(:hover) {
+    border-color: transparent;
+}
+
+.produto .box.xbox:hover i {
+    color: rgb(0, 171, 82);
+}
+
+label {
+    display: inline-block; /* Permite que o rótulo e o ícone fiquem na mesma linha */
+    vertical-align: middle; /* Alinha verticalmente com o ícone */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+button {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+     background-color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+.fa-truck-fast {
+    font-size: 23px;
+    margin-top: -8px;
+    margin-right: 10px;
+    vertical-align: middle; /* Alinha verticalmente com o rótulo */
+}
+
+#frete-info p {
+    font-size: 1.1em;
+    margin: 0;
+    padding: 10px 0;
+}
+
+#frete-info hr {
+    border: 0;
+    height: 1px;
+    background: #444;
+    margin: 10px 0;
+}
+
+.error {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.seletor_de_quantidade {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .quantidade_selecionada {
+    display: inline-block;
+    padding: 17px 18px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .lista_suspensa_de_quantidade {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+  }
+  
+  .lista_suspensa_de_quantidade.show {
+    display: block;
+  }
+  
+  .lista_suspensa_de_quantidade span {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .lista_suspensa_de_quantidade span:hover {
+    background-color: #ff0000;
+  }
+
+  .fa-arrow-down {
+    font-size: 16px; 
+    margin-left: 2px; 
+  }
+  
+.info-adicional-bloco-add {
+    background-color: rgba(2, 2, 2, 0.763);
+    color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.info-adicional-bloco-add h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+.info-lista {
+    list-style: none;
+    padding: 0;
+}
+.info-lista li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.info-lista hr {
+    border: 0;
+    border-top: 1px solid #ff4500;
+    margin: 10px 0;
+}
+.info-lista li strong {
+    color: #00ff7f;
+}
+.classificacao-livre {
+    color: #32cd32;
+    font-weight: bold;
+}
+
+.info-adicional-bloco-ad {
+    background-color: rgba(2, 2, 2, 0.763);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-adicional-bloco-ad h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-adicional-bloco-ad ul {
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-adicional-bloco-ad ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.info-adicional-bloco-ad ul li:before {
+    content: "\2022";
+    display: inline-block;
+    width: 0.5em; 
+    margin-left: 3px; 
+    margin-right: 10px; 
+    font-size: 25px; 
+}
+
+.produtos-relacionados {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-family: 'Games', sans-serif;
+    margin-top: 90px;
+    /* Ajusta o espaçamento superior */
+    margin-left: 2%;
+    /* Ajusta a margem esquerda */
+  }
+
+.jogos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+    overflow-x: auto;
+    /* Adiciona rolagem horizontal quando necessário */
+  }
+  
+  .jogo-item {
+    width: calc(25% - 20px);
+    /* Para 4 jogos por linha */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .jogo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  
+  .jogo-info {
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .jogo-info p {
+    margin-bottom: 8px;
+  }
+  
+  .jogo-item:hover .jogo-info {
+    opacity: 1;
+    cursor: pointer;
+    /* Mostra as informações ao passar o mouse */
+  }
+  
+  .jogo-avaliacao {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .jogo-avaliacao i {
+    margin-right: 5px;
+  }
+  
+  .jogo-item:hover .jogo-avaliacao i,
+  .jogo-item:hover .jogo-avaliacao p {
+    color: yellow;
+  }
+  
+  .jogo-item:hover .jogo-info {
+    opacity: 1;
+    /* Mostra as informações ao passar o mouse */
+  }
+  
+  .titulo-jogos {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-family: 'Games', sans-serif;
+    margin-top: 90px;
+    /* Ajusta o espaçamento superior */
+    margin-left: 14%;
+    /* Ajusta a margem esquerda */
+  }
+  
+  .jogo-item {
+    position: relative;
+  }
+  
+  .jogo-item .fa-heart {
+    position: absolute;
+    font-size: 34px;
+    /* Ajustando o tamanho do coração */
+    top: 10px;
+    right: 10px;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .jogo-item:hover .fa-heart {
+    display: block;
+  }
+
+  .genre {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.441); /* ou qualquer cor que você queira para os links */
+    cursor: pointer; 
+    border-radius: 10px;
+    padding: 2px 15px; 
+    margin-left: -15px;
+    font-size: 20px;
+}
+
+:root {
+  --main-color: #fa5353;
+  --second-color: #5f3dad;
+  --dark-color: #181b2b;
+  --light-color: #322f40;
+  --text-color: hsl(0, 0%, 91%);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  overflow-x: hidden;
+}
+
+::selection {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+
+/* Estilo do formulário de pesquisa */
+#formPesquisa {
+  max-width: 600px; /* Aumentado para maior destaque */
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin-top: 7%;
+}
+
+.campo-pesquisa-container {
+  position: relative;
+  width: 100%;
+}
+
+#campoPesquisa.remove-text {
+  transition: width 1.5s ease-in-out;
+  width: calc(100% - 50px); 
+}
+
+/* Estilo do campo de pesquisa */
+#campoPesquisa {
+  width: 100%;
+  padding: 15px 20px 15px 40px; /* Aumentado para maior conforto */
+  font-size: 18px; /* Fonte maior para maior legibilidade */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2866/2866321.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px;
+  border: 2px solid var(--light-color);
+  border-radius: 0; /* Removido as bordas arredondadas */
+  outline: none;
+  background-color: var(--dark-color);
+  color: var(--text-color);
+  transition: border-color 0.3s, background-color 0.3s;
+  position: relative; /* Necessário para o aviso */
+}
+
+#campoPesquisa:focus {
+  border-color: var(--main-color);
+  background-color: var(--light-color);
+}
+
+.icone-pesquisa {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-color); /* Adicionado cor para o ícone */
+}
+
+/* Estilo do botão de limpar */
+.limpar-campo {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+  color: var(--text-color);
+}
+
+/* Exibir botão de limpar quando o campo de pesquisa não estiver vazio */
+#campoPesquisa:not(:placeholder-shown) ~ .limpar-campo {
+  display: inline;
+}
+
+/* Estilo do aviso de caracteres */
+.char-warning {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  color: var(--main-color);
+  margin-top: 5px;
+}
+
+/* Estilo do contêiner de resultados */
+#contenedorResultados {
+  max-width: 600px; /* Correspondente ao campo de pesquisa */
+  margin: 0 auto; /* Alinha com o campo de pesquisa */
+  position: relative;
+  z-index: 1; /* Garante que os resultados apareçam acima de outros elementos */
+}
+
+#resultadosPesquisa {
+  background-color: var(--dark-color);
+  border: 2px solid var(--light-color);
+  border-top: none; /* Remove a borda superior para integrar com o campo de pesquisa */
+  border-radius: 0; /* Removido as bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Altura máxima para o contêiner de resultados */
+  overflow-y: auto; /* Permite rolagem vertical */
+  opacity: 0; /* Começa com opacidade 0 */
+  transition: opacity 0.5s ease-in-out; /* Transição de opacidade de 0.5 segundos */
+}
+
+#resultadosPesquisa.show-results {
+  opacity: 1; /* Opacidade total quando a classe show-results é adicionada */
+}
+
+/* Estilo da animação do Mario */
+.mario-animation {
+  width: 100%;
+  height: 50px;
+  background-image: url('https://media.tenor.com/UkvleU1dQK4AAAAj/2d-mario-running.gif'); /* Imagem de Mario correndo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  animation: marioRun 1s linear forwards; /* Durar apenas 1 segundo */
+  display: none; /* Esconde a animação inicialmente */
+}
+
+@keyframes marioRun {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+/* Estilo dos itens de resultados */
+.jogo-item-resul {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-color);
+  padding: 10px;
+  background-color: var(--dark-color);
+  transition: background-color 0.3s;
+}
+
+.jogo-item-resul:hover {
+  background-color: var(--light-color);
+}
+
+.jogo-item-resul img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0; /* Removido as bordas arredondadas */
+}
+
+.jogo-info-resul {
+  flex: 1;
+  padding: 0 10px;
+  color: var(--text-color);
+}
+
+.jogo-info-resul p {
+  margin: 5px 0;
+}
+
+.link-jogo {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link-jogo:hover {
+  color: var(--second-color);
+}
+
+.botao-compra {
+  color: var(--text-color);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0;
+}
+
+/* Ajuste de cores e margens */
+.white-icon {
+  color: var(--text-color);
+}
+
+.pagina-especifica-link {
+  cursor: pointer;
+}
+
+/* Mostrar o contêiner de resultados apenas quando houver resultados */
+#resultadosPesquisa.has-results {
+  display: block;
+}
+
+
+
+
+  
+  
+
+
+

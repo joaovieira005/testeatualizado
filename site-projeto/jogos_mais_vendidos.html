@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>site(nome)</title>
+    <meta name="description" content="Menu">
+    <meta name="author" content="Agilie Team - Tatiana Kushnir">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/categorias/jogos_mais_vendidos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-XXXXXX" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/sa.svg" alt="logo" style="width: 40%;">
+            </a>
+            <div class="nav-icones">
+                <div id="jogosFavoritosContainer" style="display: none;"></div>
+                <i class="borda"><i class="fa-solid fa-heart"></i></i>
+                <a href="jogos_plaplaystation.html"><i class="borda"><i class="fa-brands fa-playstation"></i></i></a>
+                <a href="jogos_xbox.html"><i class="borda"><i class="fa-brands fa-xbox"></i></i></a>
+                <span style="margin-right: -20px;"><a href="entrar.html"><i class="borda"><i
+                                class="fa-regular fa-user"></i></i></a></span>
+                <span style="margin-left: 5px;"><i class="borda fa-solid fa-search" id="searchIcon"></i></span>
+                <div class="menu-icones">
+                    <div class="linha1"></div>
+                    <div class="linha2"></div>
+                    <div class="linha3"></div>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="menu">
+                <img src="" alt="" />
+                <div class="navbar">
+                    <li><a href="index.html">Início</a></li>
+                    <li>
+                        <a href="jogos_mais_vendidos.html" id="secao-tendencia">Tendências</a>
+                    </li>
+                    <li>
+                        <a href="novidades_categorias.html" id="secao-ultimos">Últimos Lançamentos</a>
+                    </li>
+                    <li><a href="#">Categorias</a></li>
+                    <li>
+                        <a href="sobre_nos.html" id="secao-jogos-acao">Sobre-Nós</a>
+                    </li>
+                    <li><a href="#">Contate-nos</a></li>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <form id="formPesquisa" class="hidden">
+        <div class="campo-pesquisa-container">
+            <input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Pesquisar jogos... (3x)">
+            <span id="iconePesquisa" class="icone-pesquisa"></span>
+            <span id="limparCampo" class="limpar-campo">&times;</span>
+        </div>
+    </form>
+
+    <div id="contenedorResultados">
+        <div id="animacaoMario" class="mario-animation"></div>
+        <div id="resultadosPesquisa"></div>
+    </div>
+
+    
+
+    <div class="slide-container">
+        <div class="mySlides fade">
+            <img
+                src="assets/img/EGS_EASPORTSFC24StandardEdition_EACanada_S1_2560x1440-f1772618b782ca975f0bbe33db3a88b3.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/51.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/jpt-reveal-meta.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/EGS_Back4Blood_TurtleRockStudios_S1-2560x1440-c50bb45e4f6f4805a26914e28491c15a.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img
+                src="assets/img/EGS_RatchetClankRiftApart_InsomniacGames_S1_2560x1440-aea43afcad407b14673456322e63a01b.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/P8AN9kNfSJtfSx0PmlT93mnN.webp">
+        </div>
+
+        <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div id="mensagemFavorito" class="mensagem-favorito"></div>
+    <h3 class="titulo-jogos-mais-vendidos">Os mais vendidos</h3>
+    <ul class="categorias">
+        <ul>
+            <h5 class="categorias-h5">CATEGORIAS</h5>
+            <li>
+                <a href="#" style="color: red;">
+                    <i class="fas fa-trophy"></i>Mais vendidos
+                </a>
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 5px;"></i> <span
+                        style="margin-left: -10px;">Voltar</span>
+                </a>
+            </li>
+            <li><a href="novidades_categorias.html"><i class="fas fa-star"></i>Novidades</a></li>
+            <li><a href="proximos_lancamentos.html"><i class="fas fa-calendar-alt"></i>Próximos lançamentos</a></li>
+            <li><a href="promocoes_categorias.html"><i class="fas fa-tags"></i>Promoções</a></li>
+
+            <h5 class="categorias-h5 ver-por-genero">VER POR GÊNERO</h5>
+            <li><a href="aventura.html"><i class="fas fa-hat-wizard"></i>Aventura</a></li>
+            <li><a href="acao.html"><i class="fas fa-fist-raised"></i><span style="margin-left: 7px;">Ação</span></a></li>
+            <li><a href="corridas.html"><i class="fas fa-car"></i>Corridas</a></li>
+            <li><a href="desporto.html"><i class="fas fa-futbol"></i>Desporto</a></li>
+            <li><a href="estrategia.html"><i class="fas fa-chess"></i>Estratégia</a></li>
+            <li><a href="RPG.html"><i class="fas fa-dice-d20"></i>RPG</a></li>
+            <li><a href="rpg_de_acao.html"><i class="fas fa-dragon"></i>RPG de Ação</a></li>
+            <li><a href="sobrevivencia.html"><i class="fas fa-user-shield"></i>Sobrevivência</a></li>
+            <li><a href="luta.html"><i class="fas fa-hand-rock"></i>Luta</a></li>
+            <li><a href="terror.html"><i class="fas fa-ghost"></i>Terror</a></li>
+        </ul>
+    </ul>
+
+    <div class="jogos-container">
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="minicreft.html">
+                <img src="assets/img/minecraft-capa-uvhf326u6qg1.webp" style="height: 113%;" alt="Minecraft">
+                <div class="desconto-overlay-minicreft">-9%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,7</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Minecraft</p>
+                    <div class="genre">
+                        <p><a href="sobrevivencia.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                    style="margin-left: 2px;"></span> Sobrevivência</a></p>
+                    </div>
+                    <p class="precos">
+                        <span class="preco-novo">R$200,00</span>
+                        <br>
+                        <span class="preco-antigo">De: R$219,00</span>
+                    </p>
+                    <div class="mais-vendido">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>Mais vendido da história</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="ea_sport_fc_24">
+                <img src="assets/img/ea-sports-fc-24-capa.jpeg" alt="EA Sports FC 24">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,7</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">EA Sports FC 24</p>
+                    <p><a href="desporto.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 10px;">Desporto</span></a></p>
+                    <p>R$ 275,52</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="Grand_Theft_Auto_V.html">
+                <img src="assets/img/grand-theft-auto-v_cts9.jpg" style="height: 152%;" alt="Grand Theft Auto V">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,9</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Grand Theft Auto V</p>
+                    <p><a href="acao.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a>
+                        <a href="aventura.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                                Aventura</span></a>
+                    </p>
+                    <p>R$ 102,00</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="jogo-item">
+            <a href="pagina_destino.html">
+                <img src="assets/img/4MxzDZKZwtEWyMWZghvwd7bQ.jpg" alt="far cry 6">
+                <div class="desconto-overlay">-42%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,8</p>
+                </div>
+                <i class="fa-solid fa-heart favorito"></i>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">far cry 6</p>
+                    <p><a href="fps.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> FPS</a><a
+                            href="acao.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                                ação</span></a>
+                    </p>
+                    <p class="precos">
+                        <span class="preco-novo"> R$ 99,00</span>
+                        <br>
+                        <span class="preco-antigo">De: R$169,89</span>
+                    </p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px" ;></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 5px; font-size: 26px"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="final_fantasy_vii_remake.html">
+                <img style="height: 100%;" src="assets/img/red-dead-redemption-2-poster.avif"
+                    alt="Final Fantasy VII Remake">
+                <div class="desconto-overlay">-20%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,7</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Red Dead Redemption 2</p>
+                    <p><a href="acao.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                            href="aventura.html" id="genre" class="genre"></i> <span style="margin-left: -15px;">/
+                                Aventura</span></a></p>
+                    <p>R$ 195,99</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="assassins_creed_valhalla.html">
+                <img src="assets/img/demons_souls.avif" alt="Demon’s Souls">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,4</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Demon’s Souls</p>
+                    <p><a href="rpg_de_acao.html" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> RPG de ação</a></p>
+                    <p>R$349,90</p>
+                    <div class="icones-console">
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="final_fantasy_vii_remake.html">
+                <img src="assets/img/8YdK4x6G4L9EGpgWPkiPVj8y.webp" alt="God of War Ragnarök">
+                <div class="desconto-overlay">-55%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p style="font-size: 25px;">4,8</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">God of War Ragnarök</p>
+                    <p><a href="acao.html" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                            href="aventura.html" class="genre"></i><span style="margin-left: -15px;"> /
+                                Aventura</span></a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$195,00</span>
+                        <br>
+                        <span class="preco-antigo">De: R$87,75</span>
+                    </p>
+                    <div>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 5px; font-size: 26px"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="final_fantasy_vii_remake.html">
+                <img style="height: 152%;" src="assets/img/final.fantasyviiremeke.webp" alt="Final Fantasy VII Remake">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,7</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Final Fantasy VII Remake</p>
+                    <p><a href="rpg_de_acao.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> RPG de Ação</a></p>
+                    <p>R$ 169,89</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="assassins_creed_valhalla.html">
+                <img src="assets/img/Hitman_3_capa.png" style="height: 117%;" alt="Hitman 3">
+                <div class="desconto-overlay">-8%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,5</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Hitman 3</p>
+                    <p><a href="rpg_de_acao.html" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> RPG de Ação</a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$258,90</span>
+                        <br>
+                        <span class="preco-antigo">De: R$279,90</span>
+                    </p>
+                    <div class="icones-console">
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="call_of_duty_modern_warfare_III">
+                <img src="assets/img/call_of_duty_wodern_warfare_3.jpg" style="height: 262%;"
+                    alt="Call of Duty: Modern Warfare III">
+                <div class="desconto-overlay">35%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,1</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Call of Duty: Modern Warfare III</p>
+                    <p><a href="acao.html" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a href="fps.html"
+                            class="genre"><span style="margin-left: -15px;"> / FPS</span></a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$194,35</span>
+                        <br>
+                        <span class="preco-antigo">De: R$299,00</span>
+                    <div id="countdown-cod" class="countdown"></div> <!-- Adicionado o cronômetro -->
+                    </p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="pagina_destino.html">
+                <img src="assets/img/m7gCTrMRQBTPHi87Mi3leVVY.webp" alt="Little Nightmares II">
+                <div class="desconto-overlay">-60%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,7</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Little Nightmares II</p>
+                    <p><a href="acao.html" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                            href="acao.html"></a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$ 63,96</span>
+                        <br>
+                        <span class="preco-antigo">De: R$159,89</span>
+                    </p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="pagina_destino.html">
+                <img src="assets/img/forza_horizon_5.jpg" alt="Forza Horizon 5 ">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,3</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Forza Horizon 5 </p>
+                    <p><a href="corridas.html" class="genre"><i class="fa-solid fa-list"></i> Corridas</a><a
+                            href="corridas.html"></a></p>
+                    <p>R$298,90</p>
+                    <div>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 5px; font-size: 26px"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item" data-id="1">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="lego_star_wars_a_saga_skywalker">
+                <img style="height: 100%;" src="assets/img/like-a-dragon-infinite-wealth-cover-art-poster.avif"
+                    alt="Like a Dragon: Infinite Wealth">
+                <div class="desconto-overlay">-60%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,8</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Like a Dragon: Infinite Wealth</p>
+                    <p><a href="RPG.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 10px;">RPG</span></a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$131,96</span>
+                        <br>
+                        <span class="preco-antigo">De: R$329,89</span>
+                    </p>
+
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 5px; font-size: 26px"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="index.html">
+                <img src="assets/img/2898b802-4629-4b5d-b825-e5aee13aab8c.jpg" style="height: 142%; margin-top: -10px;"
+                    alt="starfield">
+                <div class="desconto-overlay">-48%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,8</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Starfield</p>
+                    <p><a href="rpg_de_acao.html" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> RPG de ação</a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$197,95</span>
+                        <br>
+                        <span class="preco-antigo">De:R$387,95</span>
+                    </p>
+                    <div>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 5px; font-size: 26px"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <a href="index.html">
+                <img src="assets/img/back_4_blood.jpg" style="height: 112%;" alt="Back 4 Blood">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,6</p>
+                </div>
+                <i class="fa-solid fa-heart favorito"></i>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Back 4 Blood</p>
+                    <p><a href="fps.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span>FPS</a></p>
+                    <p>R$118,90</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <a href="index.html">
+                <img src="assets/img/Ah7Ar9MU0r1BBlzAUflmhyQP.avif" alt="Hogwarts Legacy">
+                <div class="desconto-overlay">-24%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,8</p>
+                </div>
+                <i class="fa-solid fa-heart favorito"></i>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Hogwarts Legacy</p>
+                    <p><a href="rpg_de_acao.html" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> RPG de ação</a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$ 229,00</span>
+                        <br>
+                        <span class="preco-antigo">De: R$299,90 </span>
+                    </p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="index.html">
+                <img src="assets/img/4ItSbqJE88H019Ua3WBQKLF8.avif" alt="Returnal">
+                <div class="desconto-overlay">-56%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,7</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Returnal</p>
+                    <p><a href="fps.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> FPS</a></p>
+                    <p class="precos">
+                        <span class="preco-novo">R$ 155,00</span>
+                        <br>
+                        <span class="preco-antigo">De: R$349,90</span>
+                    </p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px" ;></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="index.html">
+                <img src="assets/img/fWiBmwK5WnQa5XG3K4aWeMpt.png" alt="Ratchet & Clank Rift Apart "
+                    style="height: 150%;">
+                <div class="desconto-overlay">-40%</div>
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>5,0</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Ratchet & Clank Rift Apart </p>
+                    <p><a href="acao.html" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                            href="aventura.html" class="genre"></i><span style="margin-left: -15px;"> /
+                                Aventura</span></a>
+                    </p>
+                    <p class="precos">
+                        <span class="preco-novo">R$ 88,17</span>
+                        <br>
+                        <span class="preco-antigo">De: R$ 146,95 </span>
+                    </p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="assassins_creed_valhalla.html">
+                <img src="assets/img/trending2.jpg" style="height: 120%;" alt="Battlefield 2042 ">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,8</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Battlefield 2042 </p>
+                    <p><a href="fps.html" class="genre"><i class="fa-solid fa-list"></i><span
+                                style="margin-left: 2px;"></span> FPS</a></p>
+                    <p>R$ 136,85</p>
+                    <div class="icones-console">
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="final_fantasy_vii_remake.html">
+                <img style="height: 150%;" src="assets/img/satr_wars_jedi_fallen_order.png"
+                    alt="Star Wars Jedi: Fallen Order">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,4</p>
+                </div>
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Star Wars Jedi: Fallen Order</p>
+                    <p><a href="acao.html" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                            href="aventura.html" class="genre"></i><span style="margin-left: -15px;"> /
+                                Aventura</span></a></p>
+                    <p>R$195,90</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="titulo-categoria-slide">Explora por categoria</div>
+    <div class="carousel-wrapper">
+        <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="categoria-card" data-hover="Aventura">
+                    <a href="aventura.html">
+                    <img src="assets/img/aventura.png" alt="Aventura">
+                    <span>AVENTURA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Ação">
+                    <a href="acao.html">
+                    <img src="assets/img/acao.png" style="height: 100%;" alt="Ação" >
+                    <span>AÇÃO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Casual">
+                    <img src="assets/img/casual.png" alt="Casual">
+                    <span>CASUAL</span>
+                </div>
+                <div class="categoria-card" data-hover="Corridas">
+                <a href="corridas.html">
+                    <img src="assets/img/corrida.png" alt="Corridas">
+                    <span>CORRIDAS</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Desporto">
+                <a href="desporto.html">
+                    <img src="assets/img/desporto.webp" alt="Desporto">
+                    <span>DESPORTO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Estratégia">
+                <a href="estrategia.html">
+                    <img src="assets/img/estra1.png" alt="Estratégia">
+                    <span>ESTRATÉGIA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="RPG">
+                <a href="RPG.html">
+                    <img src="assets/img/Designerrpg.jpeg" alt="RPG">
+                    <span>RPG</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="RPG de Ação">
+                <a href="rpg_de_acao.html">
+                    <img src="assets/img/Designerrpgacao.jpeg" alt="RPG de Ação">
+                    <span>RPG DE AÇÃO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Sobrevivência">
+                <a href="sobrevivencia.html">
+                    <img src="assets/img/sobrevivencia.png" alt="Sobrevivência">
+                    <span>SOBREVIVÊNCIA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Luta">
+                <a href="luta.html">
+                    <img src="assets/img/luta.png" alt="Luta">
+                    <span>LUTA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Terror">
+                <a href="terror.html">
+                    <img src="assets/img/terror.png" alt="Terror">
+                    <span>TERROR</span>
+                </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Jogos</h3>
+                <ul>
+                    <li><a href="aventura.html">Aventura</a></li>
+                    <li><a href="acao.html">Ação</a></li>
+                    <li><a href="corridas.html">Corridas</a></li>
+                    <li><a href="desporto.html">Desporto</a></li>
+                    <li><a href="estrategia.html">Estratégia</a></li>
+                    <li><a href="RPG.html">RPG</a></li>
+                    <li><a href="rpg_de_acao.html">RPG de Ação</a></li>
+                    <li><a href="sobrevivencia.html">Sobrevivência</a></li>
+                    <li><a href="luta.html">Luta</a></li>
+                    <li><a href="terror.html">Terror</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="jogos_mais_vendidos.html">Tendência</a></li>
+                    <li><a href="novidades_categorias.html">Últimos Lançamentos</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Política de Devolução</a></li>
+                    <li><a href="#">Pagamentos e Segurança</a></li>
+                    <li><a href="#">Frete e Prazo de Entrega</a></li>
+                    <li><a href="#">Devoluções e Reembolsos</a></li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/sa.svg" alt="Logo">
+                </a>
+                <div class="social-icons">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="jogos_plaplaystation.html"><i class="fab fa-playstation"></i></a>
+                    <a href="jogos_xbox.html"><i class="fab fa-xbox"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p style="text-align: center;">Todos os direitos reservados &copy; 2024 Monstone</p>
+        </div>
+    </footer>
+
+    
+
+    <button id="backToTop" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/carousel_slider.js"></script>
+    <script src="assets/js/categorias_animadas.js"></script>
+    <script src="assets/js/script_slide.js"></script>
+    <script src="assets/js/volta_para_topo.js"></script>
+    <script src="assets/js/produto/minicreft.js"></script>
+    <script src="assets/js/script_slide.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ToggleMoreGames.js"></script>
+    <script src="assets/js/script_menu.js"></script>
+    <script src="assets/js/script_adicionar_ao_favorito.js"></script>
+
+</body>
+
+
+
+</html>

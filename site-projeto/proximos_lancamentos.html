@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>site(nome)</title>
+    <meta name="description" content="Menu">
+    <meta name="author" content="Agilie Team - Tatiana Kushnir">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/categorias/proximos_lancamentos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-XXXXXX" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/sa.svg" alt="logo" style="width: 40%;">
+            </a>
+            <div class="nav-icones">
+                <div id="jogosFavoritosContainer" style="display: none;"></div>
+                <i class="borda"><i class="fa-solid fa-heart"></i></i>
+                <a href="jogos_plaplaystation.html"><i class="borda"><i class="fa-brands fa-playstation"></i></i></a>
+                <a href="jogos_xbox.html"><i class="borda"><i class="fa-brands fa-xbox"></i></i></a>
+                <span style="margin-right: -20px;"><a href="entrar.html"><i class="borda"><i
+                                class="fa-regular fa-user"></i></i></a></span>
+                <span style="margin-left: 5px;"><i class="borda fa-solid fa-search" id="searchIcon"></i></span>
+                <div class="menu-icones">
+                    <div class="linha1"></div>
+                    <div class="linha2"></div>
+                    <div class="linha3"></div>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="menu">
+                <img src="" alt="" />
+                <div class="navbar">
+                    <li><a href="index.html"> Início <i class="fas fa-home"></i></a></li>
+                    <li>
+                        <a href="jogos_mais_vendidos.html" id="secao-tendencia"> Tendências <i class="fas fa-chart-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="novidades_categorias.html" id="secao-ultimos"> Últimos Lançamentos <i class="fas fa-star"></i></a>
+                    </li>
+                    <li><a href="#">Categorias <i class="fas fa-th-list"></i></a></li>
+                    <li>
+                        <a href="sobre_nos.html" id="secao-jogos-acao"> Sobre Nós <i class="fa-solid fa-people-group"></i></a>
+                    </li>
+                    <li><a href="#">Contate-nos <i class="fas fa-envelope"></i></a></li>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <form id="formPesquisa" class="hidden">
+        <div class="campo-pesquisa-container">
+            <input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Pesquisar jogos... (3x)">
+            <span id="iconePesquisa" class="icone-pesquisa"></span>
+            <span id="limparCampo" class="limpar-campo">&times;</span>
+        </div>
+    </form>
+
+    <div id="contenedorResultados">
+        <div id="animacaoMario" class="mario-animation"></div>
+        <div id="resultadosPesquisa"></div>
+    </div>
+
+    <div class="slide-container">
+        <div class="mySlides fade">
+            <img src="assets/img/stalker.jpeg">
+            <div class="release-info">05/09/2024</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/Hellblade-II-Cover-d0e4086b68dabbef4651.jpg">
+            <div class="release-info">02/07/2024 às 03:12</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/maxresdefault1.jpg">
+            <div class="release-info">Data de lançamento a ser definida.</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/maxresdefault.jpg">
+            <div class="release-info">20/08/2024</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/maxresdefault2.jpg">
+            <div class="release-info">06/07/2024</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.ytimg.com/vi/6cs-A1rNvEE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD7qYZaFNp5aplvoM7SioYh3SPFTA">
+            <div class="release-info">2025</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="assets/img/a3b693d9af950ca488ab26b6e17032aa44b95459fe4b2f6d.avif">
+            <div class="release-info">2024</div>
+        </div>
+        <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <ul class="categorias" style="margin-top: 120px;">
+        <ul>
+            <h5 class="categorias-h5">CATEGORIAS</h5>
+            <li><a href="jogos_mais_vendidos.html"><i class="fas fa-trophy"></i>Mais vendidos</a></li>
+            <li><a href="novidades_categorias.html"><i class="fas fa-star"></i>Novidades</a></li>
+            <li>
+                <a href="#" style="color: red;">
+                    <i class="fas fa-trophy"></i>Próximos lançamentos<br>
+                </a>
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 5px;"></i> <span
+                        style="margin-left: -10px;">Voltar</span>
+                </a>
+            </li>
+            <li><a href="promocoes_categorias.html"><i class="fas fa-tags"></i>Promoções</a></li>
+
+            <h5 class="categorias-h5 ver-por-genero">VER POR GÊNERO</h5>
+            <li><a href="aventura.html"><i class="fas fa-hat-wizard"></i>Aventura</a></li>
+            <li><a href="acao.html"><i class="fas fa-fist-raised"></i><span style="margin-left: 7px;">Ação</span></a></li>
+            <li><a href="corridas.html"><i class="fas fa-car"></i>Corridas</a></li>
+            <li><a href="desporto.html"><i class="fas fa-futbol"></i>Desporto</a></li>
+            <li><a href="estrategia.html"><i class="fas fa-chess"></i>Estratégia</a></li>
+            <li><a href="RPG.html"><i class="fas fa-dice-d20"></i>RPG</a></li>
+            <li><a href="rpg_de_acao.html"><i class="fas fa-dragon"></i>RPG de Ação</a></li>
+            <li><a href="sobrevivencia.html"><i class="fas fa-user-shield"></i>Sobrevivência</a></li>
+            <li><a href="luta.html"><i class="fas fa-hand-rock"></i>Luta</a></li>
+            <li><a href="terror.html"><i class="fas fa-ghost"></i>Terror</a></li>
+        </ul>
+    </ul>
+
+    <div class="jogos-container">
+        <div class="jogo-item">
+            <img src="assets/img/starker.2.jpeg" alt="s.t.a.l.k.e.r. 2: heart of chornobyl">
+            <div class="jogo-info">
+                <p>s.t.a.l.k.e.r. 2: heart of chornobyl</p>
+                <div class="launch-info">
+                    <div class="release-date-block">
+                        <p class="legenda">Data de Lançamento:</p>
+                        <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date">5/9/2024</span></p>
+                    </div>
+                    <div class="countdown-block">
+                        <p class="legenda">Até a Estreia:</p>
+                        <p class="tooltip">
+                            <i class="fas fa-clock"></i>
+                            <span style="margin-left: 5px;" id="countdown"></span>
+                            <span class="tooltiptext">05/09/2024</span>
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    <a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> FPS</a>
+                    <a href="minicreft.html" id="genre" class="genre"><span style="margin-left: -15px;">/
+                            Terror</span></a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="jogo-item">
+            <img src="assets/img/co6e8b.webp" style="height: 120%;" alt="Black Myth: Wukong">
+            <div class="jogo-info">
+                <p>Black Myth: Wukong</p>
+                <div class="launch-info">
+                    <div class="release-date-block">
+                        <p class="legenda">Data de Lançamento</p>
+                        <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date">20/8/2024</span></p>
+                    </div>
+                    <div class="countdown-block">
+                        <p class="legenda">Até a Estreia</p>
+                        <p class="tooltip">
+                            <i class="fas fa-clock"></i>
+                            <span style="margin-left: 5px;" id="countdown-wukong"></span>
+                            <span class="tooltiptext">20/08/2024</span>
+                        </p>
+                    </div>
+                </div>   
+                <p>
+                    <a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a>
+                    <a href="minicreft.html" id="genre" class="genre"><span style="margin-left: -15px;"> /
+                            Aventura</span></a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="jogo-item">
+            <img style="height: 100%;"
+                src="assets/img/apps.43367.14301289549560004.7d830c82-f759-451a-adcd-4e3e8d6e8a30.jpeg"
+                alt="Senua’s Saga: Hellblade II">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Senua’s Saga: Hellblade II</p>
+                <div class="launch-info">
+                    <div class="release-date-block">
+                        <p class="legenda">Data de Lançamento</p>
+                        <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hellblade">02/07/2024</span></p>
+                    </div>
+                    <div class="countdown-block">
+                        <p class="legenda">Até a Estreia</p>
+                        <p class="tooltip">
+                            <i class="fas fa-clock"></i>
+                            <span style="margin-left: 5px;" id="countdown-hellblade"></span>
+                            <span class="tooltiptext">02/07/2024 às 03:12</span>
+                        </p>
+                    </div>
+                </div>            
+                <p>
+                    <a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a>
+                    <a href="minicreft.html" id="genre" class="genre"><span style="margin-left: -15px;">/
+                            Aventura</span></a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="jogo-item">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/3020/0c05ae77009875cbfd368d348c2c4be3d04f7bdcc5e6ce5d.jpg"
+                alt="Star Wars Outlaws" class="jogo-imagem">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Star Wars Outlaws</p>
+                <div class="launch-info">
+                    <div class="release-date-block">
+                        <p class="legenda">Data de Lançamento</p>
+                        <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-outlaws">30/08/2024</span></p>
+                    </div>
+                    <div class="countdown-block">
+                        <p class="legenda">Até a Estreia</p>
+                        <p class="tooltip">
+                            <i class="fas fa-clock"></i>
+                            <span style="margin-left: 5px;" id="countdown-outlaws"></span>
+                            <span class="tooltiptext">30/08/2024 às 00:00 (BRT)</span>
+                        </p>
+                    </div>
+                </div>                
+                <p>
+                    <a href="index.html" class="genre"><i class="fa-solid fa-list"></i> Ação</a>
+                    <a href="minicreft.html" class="genre"></i><span style="margin-left: -15px;"> / Aventura</span></a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--JOGOS POPULARES-->
+        <!--JOGO 5-->
+        <div class="jogo-item">
+            <i class="fa-solid fa-heart favorito"></i>
+            <a href="minicreft.html">
+                <img src="assets/img/hades-ii-acu3y(1).png" style="height: 115%;" alt="Hades 2">
+                <div class="jogo-info">
+                    <p style="color: aliceblue;">Hades 2</p>
+                    <div class="launch-info">
+                        <div class="release-date-block">
+                            <p class="legenda">Data de Lançamento</p>
+                            <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">06/07/2024</span></p>
+                        </div>
+                        <div class="countdown-block">
+                            <p class="legenda">Até a Estreia</p>
+                            <p class="tooltip">
+                                <i class="fas fa-clock"></i>
+                                <span style="margin-left: 5px;" id="countdown-hades"></span>
+                                <span class="tooltiptext">06/07/2024</span>
+                            </p>
+                        </div>
+                    </div>                   
+                    <div class="genre">
+                        <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i><span
+                                    style="margin-left: 2px;"></span> RPG de Ação</a></p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                        <i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!--JOGOS POPULARES-->
+        <!--JOGO 6-->
+        <div class="jogo-item">
+            <img src="assets/img/800x800.jpg" alt="Grand Theft Auto VI">
+            <div class="jogo-info">
+                <p>Grand Theft Auto VI</p>
+                <div class="launch-info">
+                    <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">2025</span></p>
+                </div>
+                <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a>
+                    <a href="minicreft.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                            Aventura</span></a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--JOGOS POPULARES-->
+        <!--JOGO 7-->
+        <div class="jogo-item">
+            <img src="assets/img/marvel-1943-rise-of-hydra_r3ds.jpg" alt="Marvel 1943: Rise of Hydra">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Marvel 1943: Rise of Hydra</p>
+                <div class="launch-info">
+                    <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">2025</span></p>
+                </div>
+                <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                        href="minicreft.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                            Aventura</span></a></p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+            <div id="mensagemFavorito" class="mensagem-favorito"></div>
+        </div>
+
+        <!--JOGOS POPULARES-->
+        <!--JOGO 8-->
+        <div class="jogo-item">
+            <img style="height: 100%;"
+                src="assets/img/MV5BZGFlY2RjYzgtNThiOC00ZDAzLTljNjUtYzY2NzkzYThlMjBkXkEyXkFqcGdeQXVyMTk2OTAzNTI@._V1_.jpg"
+                alt="Death Stranding 2: On the Beach">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Death Stranding 2: On the Beach</p>
+                <div class="launch-info">
+                    <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">2025</span></p>
+                </div>
+                <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                        href="minicreft.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                            Aventura</span></a></p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="jogo-item">
+            <img style="height: 100%;" src="assets/img/7mO2To2nF21yRyEd2hNusdFP.jpg" alt="Warhammer 40,000: Space Marine 2">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Warhammer 40,000: Space Marine 2</p>
+                <div class="launch-info">
+                    <div class="release-date-block">
+                        <p class="legend">Data de Lançamento</p>
+                        <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-space-marine">9/9/2024</span></p>
+                    </div>
+                    <div class="countdown-block">
+                        <p class="legend">Até a Estreia</p>
+                        <p class="tooltip">
+                            <i class="fas fa-clock"></i>
+                            <span style="margin-left: 5px;" id="countdown-space-marine"></span>
+                            <span class="tooltiptext">09/09/2024</span>
+                        </p>
+                    </div>
+                </div>
+                <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                    href="minicreft.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                        Aventura</span></a></p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="jogo-item">
+            <img style="height: 100%;" src="assets/img/co6lz2.webp" alt="Dungeons of Hinterberg">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Dungeons of Hinterberg</p>
+                <div class="launch-info">
+                    <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">2024</span></p>
+                </div>
+                <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Ação</a><a
+                    href="minicreft.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                        Aventura</span></a></p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="jogo-item">
+            <img style="height: 100%;" src="assets/img/nightmares3-1692881952367.jpg" alt="Little Nightmares 3">
+            <div class="jogo-info">
+                <p style="color: aliceblue;">Little Nightmares 3</p>
+                <div class="launch-info">
+                    <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">2024</span></p>
+                </div>
+                <p><a href="index.html" id="genre" class="genre"><i class="fa-solid fa-list"></i> Terror</a><a
+                    href="minicreft.html" id="genre" class="genre"></i><span style="margin-left: -15px;"> /
+                        Aventura</span></a></p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="jogo-item">
+            <img style="height: 100%;" src="assets/img/a3b693d9af950ca488ab26b6e17032aa44b95459fe4b2f6d.avif" alt=" Lost Records: Bloom and Rage ">
+            <div class="jogo-info">
+                <p style="color: aliceblue;"> Lost Records: Bloom and Rage </p>
+                <div class="launch-info">
+                    <p class="release-date"><i class="fas fa-calendar-alt"></i><span style="margin-left: 5px;" id="release-date-hades">2024</span></p>
+                </div>
+                <p><a href="index.html" class="genre"><i class="fa-solid fa-list"></i><span
+                    style="margin-left: 2px;"></span> Aventura</a></p>
+                <div>
+                    <i class="fa-brands fa-playstation" style="margin-right: 5px; font-size: 26px;"></i>
+                    <i i class="fa-brands fa-xbox" style="margin-right: 10px; font-size: 26px;"></i>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="titulo-categoria-slide">Explora por categoria</div>
+    <div class="carousel-wrapper">
+        <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="categoria-card" data-hover="Aventura">
+                    <a href="aventura.html">
+                    <img src="assets/img/aventura.png" alt="Aventura">
+                    <span>AVENTURA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Ação">
+                    <a href="acao.html">
+                    <img src="assets/img/acao.png" style="height: 100%;" alt="Ação" >
+                    <span>AÇÃO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Casual">
+                    <img src="assets/img/casual.png" alt="Casual">
+                    <span>CASUAL</span>
+                </div>
+                <div class="categoria-card" data-hover="Corridas">
+                <a href="corridas.html">
+                    <img src="assets/img/corrida.png" alt="Corridas">
+                    <span>CORRIDAS</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Desporto">
+                <a href="desporto.html">
+                    <img src="assets/img/desporto.webp" alt="Desporto">
+                    <span>DESPORTO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Estratégia">
+                <a href="estrategia.html">
+                    <img src="assets/img/estra1.png" alt="Estratégia">
+                    <span>ESTRATÉGIA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="RPG">
+                <a href="RPG.html">
+                    <img src="assets/img/Designerrpg.jpeg" alt="RPG">
+                    <span>RPG</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="RPG de Ação">
+                <a href="rpg_de_acao.html">
+                    <img src="assets/img/Designerrpgacao.jpeg" alt="RPG de Ação">
+                    <span>RPG DE AÇÃO</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Sobrevivência">
+                <a href="sobrevivencia.html">
+                    <img src="assets/img/sobrevivencia.png" alt="Sobrevivência">
+                    <span>SOBREVIVÊNCIA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Luta">
+                <a href="luta.html">
+                    <img src="assets/img/luta.png" alt="Luta">
+                    <span>LUTA</span>
+                </a>
+                </div>
+                <div class="categoria-card" data-hover="Terror">
+                <a href="terror.html">
+                    <img src="assets/img/terror.png" alt="Terror">
+                    <span>TERROR</span>
+                </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Jogos</h3>
+                <ul>
+                    <li><a href="aventura.html">Aventura</a></li>
+                    <li><a href="acao.html">Ação</a></li>
+                    <li><a href="corridas.html">Corridas</a></li>
+                    <li><a href="desporto.html">Desporto</a></li>
+                    <li><a href="estrategia.html">Estratégia</a></li>
+                    <li><a href="RPG.html">RPG</a></li>
+                    <li><a href="rpg_de_acao.html">RPG de Ação</a></li>
+                    <li><a href="sobrevivencia.html">Sobrevivência</a></li>
+                    <li><a href="luta.html">Luta</a></li>
+                    <li><a href="terror.html">Terror</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="jogos_mais_vendidos.html">Tendência</a></li>
+                    <li><a href="novidades_categorias.html">Últimos Lançamentos</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Política de Devolução</a></li>
+                    <li><a href="#">Pagamentos e Segurança</a></li>
+                    <li><a href="#">Frete e Prazo de Entrega</a></li>
+                    <li><a href="#">Devoluções e Reembolsos</a></li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/sa.svg" alt="Logo">
+                </a>
+                <div class="social-icons">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="jogos_plaplaystation.html"><i class="fab fa-playstation"></i></a>
+                    <a href="jogos_xbox.html"><i class="fab fa-xbox"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p style="text-align: center;">Todos os direitos reservados &copy; 2024 Monstone</p>
+        </div>
+    </footer>
+
+
+    <button id="backToTop" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/carousel_slider.js"></script>
+    <script src="assets/js/categorias_animadas.js"></script>
+    <script src="assets/js/script_slide.js"></script>
+    <script src="assets/js/volta_para_topo.js"></script>
+    <script src="assets/js/produto/minicreft.js"></script>
+    <script src="assets/js/script_slide.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ToggleMoreGames.js"></script>
+    <script src="assets/js/script_menu.js"></script>
+    <script src="assets/js/script_adicionar_ao_favorito.js"></script>
+
+</body>
+</html>

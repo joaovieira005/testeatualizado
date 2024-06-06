@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>site(nome)</title>
+    <meta name="description" content="Menu">
+    <meta name="author" content="Agilie Team - Tatiana Kushnir">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/produto/minicraft.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-XXXXXX" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/sa.svg" style="width: 35%;">
+            </a>
+            <div class="nav-icones">
+                <div id="jogosFavoritosContainer" style="display: none;"></div>
+                <i class="borda"><i class="fa-solid fa-heart"></i></i>
+                <a href="jogos_plaplaystation.html"><i class="borda"><i class="fa-brands fa-playstation"></i></i></a>
+                <a href="download.html"><i class="borda"><i class="fa-brands fa-xbox"></i></i></a>
+                <a href="entrar.html"><i class="borda"><i class="fa-regular fa-user"></i></i></a>
+                <div class="menu-icones">
+                    <div class="linha1"></div>
+                    <div class="linha2"></div>
+                    <div class="linha3"></div>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="menu">
+                <img src="" alt="" />
+                <div class="navbar">
+                    <li><a href="index.html">Início</a></li>
+                    <li>
+                        <a href="jogos_mais_vendidos.html" id="secao-tendencia">Tendências</a>
+                    </li>
+                    <li>
+                        <a href="novidades_categorias.html" id="secao-ultimos">Últimos Lançamentos</a>
+                    </li>
+                    <li><a href="#">Categorias</a></li>
+                    <li>
+                        <a href="#" id="secao-jogos-acao">Sobre-Nós</a>
+                    </li>
+                    <li><a href="#">Contate-nos</a></li>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <div class="tudo">
+        <div class="produto">
+            <div class="imagem-produto">
+                <div class="imagem-grande">
+                    <img id="imagemGrande" src="assets/img/produtos/minecraft/minecraft-capa-principal.jpg"
+                        alt="Minecraft" onclick="ampliarImagem(this)">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="assets/img/produtos/minecraft/minecraft-capa-principal.jpg"
+                        alt="Minecraft">
+                    <img class="thumbnail" src="https://m.media-amazon.com/images/I/81zP5d8Bd-L._AC_SL1500_.jpg"
+                        alt="Thumbnail 1">
+                    <img class="thumbnail" src="assets/img/produtos/minecraft/minecraft2.jpg" alt="Thumbnail 2">
+                    <img class="thumbnail" src="assets/img/produtos/minecraft/minecraft3.jpg" alt="Thumbnail 3">
+                </div>
+            </div>
+            <div class="detalhes-produto">
+                <div class="info-adicional-bloco">
+                    <h2>Minecraft Starter Collection <i class="borda">
+                            <i class="fa-brands fa-playstation" style="font-size: 25px;"></i></h2>
+                            <p><a href="index.html" class="genre"><i class="fa-solid fa-list"></i><span style="margin-left: 3px; ">Sobrevivência</span></a></p>
+                    <span class="avaliacao">
+                        <span class="avaliacao-nota">4.7</span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt" style="font-size: 14px"></i>
+                    </span>
+                    <div class="valor-produto">
+                        <span class="valor">R$ 216,60</span>
+                        <span class="estoque">Em estoque</span>
+                    </div>
+                    <div class="classificação-livre">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/DJCTQ_-_L.svg/480px-DJCTQ_-_L.svg.png"
+                            alt="Classificação-livre">
+                        <span class="classificação-livre-texto">Classificação livre</span>
+                    </div>
+
+                    <div class="seletor_de_quantidade">
+                        <div class="quantidade_selecionada" onclick="alternarDropdown()">
+                            Quantidade: <span id="quantidade_atual" onclick="alternarDropdown()">1</span>
+                            <i class="fas fa-arrow-down" onclick="alternarDropdown()"></i>
+                        </div>
+                        <div class="lista_suspensa_de_quantidade">
+                            <span onclick="quantidade(1)">1</span>
+                            <span onclick="quantidade(2)">2</span>
+                            <span onclick="quantidade(3)">3</span>
+                            <span onclick="quantidade(4)">4</span>
+                            <span onclick="quantidade(5)">5</span>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button class="botao-comprar" style=" font-family: 'Arial', sans-serif;">Comprar agora</button>
+                    <button class="botao-adicionar"style=" font-family: 'Arial', sans-serif;">Adicionar ao carrinho</button>
+                    <div class="pagamentos-seguranca">
+                        <i class="fas fa-lock " style="font-size: 25px"></i>
+                        <span class="legenda-seguranca">Pagamentos e Segurança</span>
+                        <i class="fas fa-undo" style="margin-left: 10px;font-size: 25px"></i>
+                        <a href="politica_de_devolucao.html" class="Política-de-segurança">Política de devolução</a>
+                    </div>
+                    <div class="produto">
+                        <div class="box ps4">
+                            <i class="fa-brands fa-playstation" style="color: blue; font-size: 30px;"></i>
+                        </div>
+                        <div class="box xbox" onmouseover="changeImage()" onmouseout="restoreImage()"
+                            onclick="redirectToPage()">
+                            <i i class="fa-brands fa-xbox" style="font-size: 30px;"></i>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-truck-fast"></i><label for="cep">Digite seu CEP:</label>
+                    <input type="text" id="cep" pattern="\d{5}-?\d{3}" placeholder="05555-555" maxlength="9" required>
+                    <button onclick="calcularFrete()" style="font-family:'Arial', sans-serif;">Calcular</button>
+                    <div id="frete-info" class="frete-info-block"></div>
+                    
+
+                </div>
+
+
+
+                <div class="info-adicional-bloco-ad">
+                    <h2>Sobre este item</h2>
+                    <hr>
+                    <ul>
+                        <li>Minecraft é um jogo sobre como colocar blocos e se aventurar</li><br>
+                        <li>Construa qualquer coisa que você possa imaginar com recursos ilimitados no modo Criativo ou
+                            participe de grandes expedições em Sobrevivência, viajando por terras misteriosas e nas
+                            profundezas de seus próprios mundos</li><br>
+                        <li>Você vai se esconder dos monstros ou criar ferramentas, armaduras e armas para lutar?</li>
+                    </ul>
+                </div>
+
+                <div class="info-adicional-bloco-add">
+                    <h2>Informações Adicionais</h2>
+                    <ul class="info-lista">
+                        <hr>
+                        <li><strong>Desenvolvedora:</strong> Mojang Studios</li>
+                        <hr>
+                        <li><strong>Gênero:</strong> Sandbox e Sobrevivência</li>
+                        <hr>
+                        <li><strong>Data de Lançamento:</strong> 18 de Novembro de 2011</li>
+                        <hr>
+                        <li><strong>Plataformas:</strong> PlayStation, Xbox</li>
+                        <hr>
+                        <li><strong>Classificação:</strong> <span class="classificacao-livre">LIVRE</span></li>
+                        <hr>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="comentarios">
+            <h2>Comentários</h2>
+            <div class="comentario">
+                <h3>Thierry</h3>
+                <p>Ótimo jogo, recomendo!</p>
+            </div>
+            <div class="comentario">
+                <h3>João</h3>
+                <p>Gráficos incríveis, vale a pena!</p>
+            </div>
+        </div>
+
+        <form id="formPesquisa">
+            <div class="campo-pesquisa-container">
+              <input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Pesquisar jogos... (3x)">
+              <span id="iconePesquisa" class="icone-pesquisa"></span>
+              <span id="limparCampo" class="limpar-campo">&times;</span>
+            </div>
+          </form>
+          
+          <div id="contenedorResultados">
+            <div id="animacaoMario" class="mario-animation"></div> 
+            <div id="resultadosPesquisa"></div>
+          </div>
+
+
+        <div id="mensagemFavorito" class="mensagem-favorito"></div>
+        <h3 class="produtos-relacionados"> PRODUTOS RELACIONADOS</h3>
+        <div class="jogos-container">
+            <div class="jogo-item">
+                <img src="assets/img/trending1.webp" alt="Cyberpunk 2077">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4.7</p>
+                </div>
+                <div class="jogo-info">
+                    <p>Cyberpunk 2077</p>
+                    <p>R$ 168,90</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!--JOGOS POPULARES-->
+            <!--JOGO 2-->
+            <div class="jogo-item">
+                <img src="assets/img/trending2.jpg" alt="Battlefield 2042">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4.8</p>
+                </div>
+
+                <div class="jogo-info">
+                    <p>Battlefield 2042</p>
+                    <p>R$ 136,85</p>
+                    <div>
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                        <i i class="fa-brands fa-xbox" style="margin-right: 10px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!--JOGOS POPULARES-->
+            <!--JOGO 3-->
+            <div class="jogo-item" data-id="1" onclick="window.location='Overwatch.html';">
+                <img src="assets/img/trending3.jpg" alt="assassin's creed valhalla">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,9</p>
+                </div>
+
+                <div class="jogo-info">
+                    <p>assassin's creed valhalla</p>
+                    <p>R$ 169,89</p>
+                    <div class="icones-console">
+                        <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                        <i class="fa-brands fa-xbox"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--JOGOS POPULARES-->
+            <!--JOGO 4-->
+            <div class="jogo-item">
+                <img src="assets/img/trending4.jpg" alt="ghost of tsushima">
+                <div class="jogo-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <p>4,8</p>
+                </div>
+                <div class="jogo-info">
+                    <p>ghost of tsushima</p>
+                    <p>R$ 232,90</p>
+                    <i i class="fa-brands fa-xbox"></i>
+                </div>
+                <div id="mensagemFavorito" class="mensagem-favorito"></div>
+            </div>
+
+
+
+
+
+            <script src="assets/js/produto/minicreft.js"></script>
+            <script src="assets/js/script_slide.js"></script>
+            <script src="assets/js/script.js"></script>
+            <script src="assets/js/script_menu.js"></script>
+            <script src="assets/js/script_adicionar_ao_favorito.js"></script>
+            <script src="assets/js/cep.js"></script>
+</body>
+
+</html>
